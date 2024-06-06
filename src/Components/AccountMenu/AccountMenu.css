@@ -1,0 +1,55 @@
+.longin-popup{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    gap: 10px;
+}
+.account-profile-div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    /* gap: 10px; */
+}
+.longin-btn{
+    width: 90%;
+    padding: 10px 8px;
+    border: none;
+    border-radius: 8px;
+    background: orange;
+    color: white;
+
+}
+.signup-btn{
+    font-size: 12px;
+}
+.signup{
+    background: inherit;
+    color: blue;
+    /* font-size: 16px; */
+    border: none;
+    cursor: pointer;
+}
+.signup:hover{
+    color: orange;
+    text-decoration: underline;
+}
+.account-page-profile{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    padding:10px;
+    box-sizing: border-box;
+    /* padding-left: 10px; */
+    cursor: pointer;
+}
+.account-page-profile:hover{
+    background: #7accff;
+    
+}
