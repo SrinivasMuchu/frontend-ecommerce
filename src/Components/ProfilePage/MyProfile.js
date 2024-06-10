@@ -5,6 +5,7 @@ import Topbar from '../TopBar/Topbar';
 function MyProfile() {
   const [gender, setGender] = useState('');
   const [isEditing, setIsEditing] = useState(false);
+  const [changePass, setChangepass] = useState(false);
   const [name, setName] = useState('Srinivas');
   const [phone, setPhone] = useState('');
   const [email, setEmail] = useState('');
@@ -16,8 +17,13 @@ function MyProfile() {
   const handleEditClick = () => {
     setIsEditing(true);
   };
+  const handlePasswordClick = () => {
+    setIsEditing(true);
+    setChangepass(true)
+  };
   const handleEditCancelClick = () => {
     setIsEditing(false);
+    setChangepass(false)
   };
 
   const handleSaveClick = () => {
@@ -53,9 +59,45 @@ function MyProfile() {
         </div>
         <div className='profile-details-form'>
           <div className='my-profile-edit'>
-            {!isEditing ?  <button onClick={handleEditClick}>Edit details</button> : <button onClick={handleEditCancelClick}>Cancel</button>}
+            {!isEditing ? 
+            <>
+            <button onClick={handleEditClick}>Edit details</button>
+            <button onClick={handlePasswordClick}>Change password</button>
+            </>  : <button onClick={handleEditCancelClick}>Cancel</button>}
            
           </div>
+          {changePass ? <>
+            <div className='my-profile-inputs'>
+            <span>Old password</span>
+            <input
+              type='password'
+              placeholder='Enter your old password'
+              
+              // onChange={(e) => setName(e.target.value)}
+              disabled={!isEditing}
+            />
+          </div>
+          <div className='my-profile-inputs'>
+            <span>New password</span>
+            <input
+              type='password'
+              placeholder='Enter your new password'
+              
+              onChange={(e) => setPhone(e.target.value)}
+              disabled={!isEditing}
+            />
+          </div>
+          <div className='my-profile-inputs'>
+            <span>Confirm password</span>
+            <input
+              type='password'
+              placeholder='Enter your confirm password'
+              
+              onChange={(e) => setPhone(e.target.value)}
+              disabled={!isEditing}
+            />
+          </div>
+          </> : <>
           <div className='my-profile-inputs'>
             <span>Name</span>
             <input
@@ -109,6 +151,9 @@ function MyProfile() {
               <span>Female</span>
             </div>
           </div>
+          </>}
+          
+        
          
             <div className={isEditing?'my-profile-save':'hide-save-btn'}>
               <button onClick={handleSaveClick}>Save</button>

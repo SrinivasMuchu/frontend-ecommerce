@@ -38,7 +38,7 @@ function SignUpForm() {
             </div>
             <div className='login-form-input'>
             <span>Gender</span>
-            <div style={{display:'flex',alignItems:'center',gap:'10px',width:'80%'}}>
+            <div className='login-gender-div'>
             <div className='login-form-radio'>
               <input
                 type='radio'
