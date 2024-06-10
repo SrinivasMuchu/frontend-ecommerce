@@ -50,6 +50,13 @@
     cursor: pointer;
 }
 .account-page-profile:hover{
-    background: #7accff;
+    background: orange;
     
+}
+.account-page-profile button{
+    border: none;
+    background: none;
+    box-sizing: border-box;
+    width: 100%;
+    cursor: pointer;
 }
