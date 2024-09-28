@@ -42,12 +42,11 @@ function MyProfile() {
         phone,
         email,
         gender,
+        action: 'update'
       };
       const editDetails = await axios.post(
         BASE_URL + "/customer/edit-details",
-        {
-          profileData, action: 'update'
-        },
+          profileData,
         { headers }
       );
       console.log(editDetails, "details");
